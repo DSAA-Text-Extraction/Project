@@ -1,0 +1,106 @@
+16
+
+Chapter 1 Introduction
+
+of memory addressable in the system. Either way, multiprocessing can cause
+a system to change its memory access model from uniform memory access
+(UMA) to non-uniform memory access (NUMA). UMA is defined as the situation
+in which access to any RAM from any CPU takes the same amount of time. With
+NUMA, some parts of memory may take longer to access than other parts,
+creating a performance penalty. Operating systems can minimize the NUMA
+penalty through resource management, as discussed in Section 9.5.4.
+
+A recent trend in CPU design is to include multiple computing cores
+on a single chip. Such multiprocessor systems are termed multicore. They
+can be more efficient than multiple chips with single cores because on-chip
+communication is faster than between-chip communication. In addition, one
+chip with multiple cores uses significantly less power than multiple single-core
+chips.
+
+It is important to note that while multicore systems are multiprocessor
+systems, not all multiprocessor systems are multicore, as we shall see in Section
+1.3.3. In our coverage of multiprocessor systems throughout this text, unless
+we state otherwise, we generally use the more contemporary term multicore,
+which excludes some multiprocessor systems.
+
+In Figure 1.7, we show a dual-core design with two cores on the same
+chip. In this design, each core has its own register set as well as its own local
+cache. Other designs might use a shared cache or a combination of local and
+shared caches. Aside from architectural considerations, such as cache, memory,
+and bus contention, these multicore CPUs appear to the operating system as
+N standard processors. This characteristic puts pressure on operating system
+designers?and application programmers?to make use of those processing
+cores.
+
+Finally, blade servers are a relatively recent development in which multiple
+processor boards, I/O boards, and networking boards are placed in the same
+chassis. The difference between these and traditional multiprocessor systems
+is that each blade-processor board boots independently and runs its own
+operating system. Some blade-server boards are multiprocessor as well, which
+blurs the lines between types of computers. In essence, these servers consist of
+multiple independent multiprocessor systems.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+CPU coreo CPU core1
+registers registers
+cache cache
+memory
+
+ 
+
+ 
+
+ 
+
+Figure 1.7 A dual-core design with two cores placed on the same chip.
