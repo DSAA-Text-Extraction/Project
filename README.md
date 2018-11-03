@@ -1,2 +1,2 @@
 # DSAA Project
-##Extraction of text from images and converting it to speech
+Extraction of text from images and converting it to speech
