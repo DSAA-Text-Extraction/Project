@@ -12,6 +12,6 @@ def cloud_convert(page_range,path):
     	'file': open(path, 'rb')
 	})
 	process.wait() 
-	process.download("/home/san/aaa/images")
+	process.download("/home/username/dsaa-project/images")
 
-cloud_convert('9-10', '/home/san/aaa/pdfs/dssa.pdf')
+cloud_convert('9-10', '/home/username/dsaa-project/pdfs/sol.pdf')
