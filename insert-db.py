@@ -1,7 +1,7 @@
 import mysql.connector as mysql #mysql-connector
 import sys
 
-db= mysql.connect(user="root",password="chandracanth_5495",host="localhost",database="dsaa")
+db= mysql.connect(user="root",password="your_password",host="localhost",database="dsaa")
 mycursor = db.cursor()
 
 """
@@ -14,7 +14,7 @@ create table test (id int(10) AUTO_INCREMENT primary key,address varchar(255), U
 
 """
 sql = "INSERT INTO test (address,just) VALUES (%s ,%s)"
-val=[('/home/chandra/dsaa-project/images/OS-1.jpg','1'),('/home/chandra/dsaa-project/images/OS-2.jpg','1')]
+val=[('/home/username/dsaa-project/images/OS-1.jpg','1'),('/home/username/dsaa-project/images/OS-2.jpg','1')]
 mycursor.executemany(sql,val)
 db.commit()
 """
